@@ -1,0 +1,21 @@
+@import "bootstrap";
+
+
+nav {
+  .btn {
+    margin-right: 1rem;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #3a3939;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  background-image: url('/diary.jpg');
+  height: 100vh;
+  border-radius: 0px;
+}
