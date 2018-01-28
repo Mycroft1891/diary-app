@@ -15,7 +15,13 @@ nav {
 
 .jumbotron {
   margin-bottom: 0px;
+  padding-top: 25%;
   background-image: url('/diary.jpg');
   height: 100vh;
   border-radius: 0px;
+  text-align: center;
+  color: whitesmoke;
+  p {
+    font-size: 2rem;
+  }
 }
