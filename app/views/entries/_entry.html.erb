@@ -5,6 +5,6 @@
   </div>
   <div class="card-body">
     <h5 class="card-title"><%= entry.title %></h5>
-    <p class="card-text"><%= entry.content %></p>
+    <p class="card-text"><%= truncate(entry.content, length: 130) %></p>
   </div>
 </div>

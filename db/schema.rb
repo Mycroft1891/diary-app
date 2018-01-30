@@ -18,10 +18,11 @@ ActiveRecord::Schema.define(version: 20180128223902) do
   create_table "entries", force: :cascade do |t|
     t.string "title", null: false
     t.text "content", null: false
+    t.datetime "date", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_entries_on_user_id_and_created_at"
+    t.index ["user_id", "created_at", "date"], name: "index_entries_on_user_id_and_created_at_and_date"
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 
