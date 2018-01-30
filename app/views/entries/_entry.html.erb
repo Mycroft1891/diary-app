@@ -1,0 +1,10 @@
+<div class="card bg-light border-light mb-3">
+  <div class="card-header">
+    <%= entry.created_at.strftime("%B %d") %>
+    <%= link_to "edit", edit_entry_path(entry), class: "float-right" %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= entry.title %></h5>
+    <p class="card-text"><%= entry.content %></p>
+  </div>
+</div>

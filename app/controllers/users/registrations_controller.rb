@@ -17,11 +17,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource/edit
   def edit
     super
+    puts "****************************************"
+    puts "edit from my controller"
   end
 
   # PUT /resource
   def update
     super
+    puts "****************************************"
+    puts "update from my controller"
   end
 
   # DELETE /resource
@@ -47,14 +51,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    puts "Updating user info"
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    super(resource)
-    redirect_to entries_path
+    entries_path
   end
 
   # The path used after sign up for inactive accounts.
@@ -63,7 +65,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def after_update_path_for(resource)
-    super(resource)
-    redirect_to entries_path
+    entries_path
   end
 end
