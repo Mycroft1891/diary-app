@@ -6,6 +6,16 @@ nav {
   }
 }
 
+.container {
+  min-width: 100%;
+  margin-top: 5rem;
+}
+
+.alert {
+  margin-top: 5rem;
+  margin-bottom: -4rem;
+}
+
 main {
   margin-top: 2rem;
 }
@@ -13,6 +23,10 @@ main {
 aside {
   border-right: 1px solid whitesmoke;
   height: 90vh;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .navbar-brand {
@@ -38,9 +52,26 @@ textarea {
   height: 50vh;
 }
 
+.all-entries {
+  margin: auto;
+}
+
+.card-item {
+  padding-left: 1px;
+  padding-right: 1px;
+  display: inline-block;
+}
+
 .card-header {
   background-color: #dd3645;
   color: white;
+  &:hover {
+    background-color: #de3645bd;
+  }
+}
+
+.card-body {
+  color: #616161;
   a {
     padding: 0rem 0.8rem;
     text-decoration: none;
@@ -52,8 +83,4 @@ textarea {
       color: #de3645;
     }
   }
-}
-
-.card-body {
-  color: #616161;
 }

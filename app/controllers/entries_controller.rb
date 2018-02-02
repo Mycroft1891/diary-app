@@ -1,6 +1,7 @@
 class EntriesController < ApplicationController
 
   before_action :define_entries
+  before_action :check_last_entry, only: [:new]
 
   def index
     @entry = Entry.new
@@ -8,6 +9,11 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
+    @related_entries = current_user.entries.limit(3)
+  end
+
+  def new
+    @entry = Entry.new
   end
 
   def create
@@ -18,7 +24,7 @@ class EntriesController < ApplicationController
       flash[:success] = "Created post"
       redirect_to entries_path
     else
-      render 'index'
+      render 'new'
     end
   end
 
@@ -47,5 +53,12 @@ class EntriesController < ApplicationController
 
   def define_entries
     @entries = current_user.entries.current_month
+  end
+
+  def check_last_entry
+    if current_user.entries.any? && current_user.entries.last.date == Time.now.beginning_of_day
+      flash[:notice] = "Already created today, edit your last entry"
+      redirect_to current_user.entries.last
+    end
   end
 end

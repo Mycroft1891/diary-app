@@ -1,0 +1,13 @@
+<div class="row justify-content-md-center">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+    <h1><%= @entry.title %></h1>
+    <%= link_to "Edit", edit_entry_path(@entry), class: "btn btn-outline-info" %>
+    <p><%= @entry.content %></p>
+    <p><%= @entry.created_at %></p>
+    <% @related_entries.each do |entry| %>
+      <div class="col-xs-12 col-sm-12 col-md-5 card-item">
+      <%= render 'entry', entry: entry %>
+      </div>
+    <% end %>
+  </div>
+</div>

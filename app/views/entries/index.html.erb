@@ -1,9 +1,7 @@
-<div class="row">
-  <aside class="hidden-sm-down col-md-4 col-lg-4">
-    <%= render 'aside' %>
-  </aside>
-
-  <main class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    <%= render 'form' %>
-  </main>
+<div class="row all-entries">
+<% @entries.each do |entry| %>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 card-item">
+  <%= render 'entry', entry: entry %>
+  </div>
+<% end %>
 </div>
