@@ -1,5 +1,13 @@
 @import "bootstrap";
 
+// color scheme
+$red:        #dd3645;
+$red-hover:  #dd3645bd;
+$whitesmoke: #f5f5f5;
+$steelblue:  #4682b4;
+$grey:       #3a3939;
+
+
 nav {
   .btn {
     margin-right: 1rem;
@@ -9,6 +17,10 @@ nav {
 .container {
   min-width: 100%;
   margin-top: 5rem;
+}
+
+.row {
+  margin-bottom: 4rem;
 }
 
 .alert {
@@ -32,7 +44,7 @@ a:hover {
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #3a3939;
+  color: $grey;
 }
 
 .jumbotron {
@@ -52,6 +64,18 @@ textarea {
   height: 50vh;
 }
 
+
+// Sign in & log in & Edit area
+
+.info-box {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: $steelblue;
+  background-color: $whitesmoke;
+  border: 1px solid $whitesmoke;
+  border-radius: 0.2rem;
+}
+
 .all-entries {
   margin: auto;
 }
@@ -63,24 +87,14 @@ textarea {
 }
 
 .card-header {
-  background-color: #dd3645;
+  background-color: $red;
   color: white;
   &:hover {
-    background-color: #de3645bd;
+    background-color: $red-hover;
   }
 }
 
 .card-body {
-  color: #616161;
-  a {
-    padding: 0rem 0.8rem;
-    text-decoration: none;
-    color: white;
-    border: 1px solid white;
-    border-radius: 0.2rem;
-    &:hover {
-      background-color: white;
-      color: #de3645;
-    }
-  }
+  background-color: $whitesmoke;
+  color: $steelblue;
 }

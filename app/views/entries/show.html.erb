@@ -3,11 +3,15 @@
     <h1><%= @entry.title %></h1>
     <%= link_to "Edit", edit_entry_path(@entry), class: "btn btn-outline-info" %>
     <p><%= @entry.content %></p>
-    <p><%= @entry.created_at %></p>
-    <% @related_entries.each do |entry| %>
-      <div class="col-xs-12 col-sm-12 col-md-5 card-item">
-      <%= render 'entry', entry: entry %>
-      </div>
-    <% end %>
+    <hr>
+    <p><%= @entry.created_at.strftime("%B %d - %Y") %></p>
+
+    <div class="featured_post">
+      <% @related_entries.each do |entry| %>
+        <div class="col-xs-12 col-sm-12 col-md-4 card-item">
+        <%= render 'entry', entry: entry %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
