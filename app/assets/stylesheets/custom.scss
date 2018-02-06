@@ -28,6 +28,11 @@ nav {
   margin-bottom: -4rem;
 }
 
+.home {
+  .alert {
+    margin-top: 0.5rem;
+  }
+}
 main {
   margin-top: 2rem;
 }
@@ -84,6 +89,10 @@ textarea {
   padding-left: 1px;
   padding-right: 1px;
   display: inline-block;
+}
+
+.card {
+  border: 0px;
 }
 
 .card-header {
