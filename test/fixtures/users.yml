@@ -7,5 +7,3 @@
 alexander:
   name: 'Alexander'
   email: 'test@gmail.com'
-  password: 'supersecret'
-  password_confirmation: 'supersecret'

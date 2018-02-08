@@ -1,11 +1,11 @@
 class EntriesController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :verify_user, only: [:show, :edit, :update, :destroy]
   before_action :check_last_entry, only: [:new]
-  before_action :define_entries
 
   def index
-    @entry = Entry.new
+    @entries = current_user.entries.current_month
   end
 
   def show
@@ -46,10 +46,6 @@ class EntriesController < ApplicationController
   private
     def entry_params
       params.require(:entry).permit(:title, :content)
-    end
-
-    def define_entries
-      @entries = current_user.entries.current_month
     end
 
     def check_last_entry
