@@ -7,5 +7,7 @@
 one:
   title: 'anything'
   content: 'something else'
-  date: <%= Time.now.beginning_of_day %>
+  date: <%= Time.now.beginning_of_day - 1.day %>
   user: alexander
+  created_at: <%= Time.now.beginning_of_day - 1.day %>
+  updated_at: <%= Time.now.beginning_of_day - 1.day %>

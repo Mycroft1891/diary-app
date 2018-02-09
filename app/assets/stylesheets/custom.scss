@@ -38,7 +38,7 @@ main {
 }
 
 aside {
-  border-right: 1px solid whitesmoke;
+  border-right: 1px solid $whitesmoke;
   height: 90vh;
 }
 
@@ -106,4 +106,19 @@ textarea {
 .card-body {
   background-color: $whitesmoke;
   color: $steelblue;
+}
+
+
+.show-entry {
+  .btn {
+    width: 100%;
+  }
+
+  .date {
+    margin-bottom: .5rem;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    background-color: whitesmoke;
+    color: $steelblue;
+    border-radius: 0.5rem;
+  }
 }
