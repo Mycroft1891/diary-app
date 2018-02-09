@@ -13,7 +13,6 @@ class EntriesController < ApplicationController
   end
 
   def new
-    @entries = current_user.entries.current_month
     @entry = Entry.new
   end
 

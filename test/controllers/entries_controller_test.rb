@@ -5,6 +5,7 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
 
   def setup
     @entry = entries(:one)
+    @other_entry = entries(:two)
     @user  = users(:alexander)
   end
 
@@ -53,5 +54,13 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
     get edit_entry_path(@entry)
     assert_response :success
+  end
+
+  test "redirect when accessing other user's post" do
+    sign_in @user
+    get entry_path(@other_entry)
+    assert_response :redirect
+    get edit_entry_path(@other_entry)
+    assert_response :redirect
   end
 end

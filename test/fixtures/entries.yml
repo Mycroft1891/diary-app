@@ -11,3 +11,12 @@ one:
   user: alexander
   created_at: <%= Time.now.beginning_of_day - 1.day %>
   updated_at: <%= Time.now.beginning_of_day - 1.day %>
+
+
+two:
+  title: 'something'
+  content: 'le content'
+  date: <%= Time.now.beginning_of_day - 1.day %>
+  user: john
+  created_at: <%= Time.now.beginning_of_day - 1.day %>
+  updated_at: <%= Time.now.beginning_of_day - 1.day %>

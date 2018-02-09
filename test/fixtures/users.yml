@@ -7,3 +7,7 @@
 alexander:
   name: 'Alexander'
   email: 'test@gmail.com'
+
+john:
+  name: 'John'
+  email: 'john@gmail.com'
