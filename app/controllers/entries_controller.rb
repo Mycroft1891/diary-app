@@ -22,7 +22,7 @@ class EntriesController < ApplicationController
     @entry.date = Time.now.beginning_of_day
     if @entry.save
       flash[:success] = "Created post"
-      redirect_to entries_path
+      redirect_to @entry
     else
       render 'new'
     end
@@ -34,7 +34,7 @@ class EntriesController < ApplicationController
   def update
     if @entry.update_attributes(entry_params)
       flash[:success] = "Your changes were saved"
-      redirect_to entries_path
+      redirect_to @entry
     else
       render 'edit'
     end

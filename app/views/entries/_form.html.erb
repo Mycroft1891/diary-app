@@ -1,9 +1,11 @@
 <div class="row show-entry">
+
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <div class="date">
       <h5><%= date.strftime("%B %d - %Y") %></h5>
     </div><!-- end date -->
   </div><!-- end aside -->
+
   <main class="col-xs-12 col-sm-12 col-md-8 col-lg-7">
     <%= form_for @entry do |f| %>
       <%= render "shared/errors", object: f.object %>
@@ -12,7 +14,8 @@
       </div>
 
       <div class="form-group">
-        <%= f.text_area :content, class: 'form-control', placeholder: 'What happened to me...' %>
+        <%= f.hidden_field :content %>
+        <trix-editor input='entry_content' placeholder='What happened to me...'></trix-editor>
       </div>
 
       <div class="form-group">

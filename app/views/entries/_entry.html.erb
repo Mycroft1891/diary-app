@@ -5,6 +5,8 @@
     </div>
   </a>
   <div class="card-body">
-    <p class="card-text"><%= truncate(entry.content, length: 100) %></p>
+    <p class="card-text">
+      <%= truncate(sanitize(entry.content, tags: []), length: 100) %>
+    </p>
   </div>
 </div>
