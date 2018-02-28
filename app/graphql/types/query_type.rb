@@ -5,6 +5,6 @@ Types::QueryType = GraphQL::ObjectType.define do
 
   field :allUsers, !types[Types::UserType] do
     description "Fetch Users"
-    resolve ->(obj, args, ctx) { User.all}
+    resolve ->(obj, args, ctx) { User.all }
   end
 end
